@@ -1,3 +1,4 @@
+//RATHENA
 3180,GreatDragon@FIREBALL,chase,17,5,10000,0,30000,yes,target,always,0,,,,,,6,
 3180,GreatDragon@FIREBALL,attack,17,5,10000,0,30000,yes,target,always,0,,,,,,6,
 
@@ -7,3 +8,88 @@
 3181,CaptainFelock@NPC_COMBOATTACK,attack,171,5,2000,2500,30000,yes,target,always,0,,,,,,6,
 3181,CaptainFelock@ARROWREPEL,chase,148,1,500,1500,5000,yes,target,always,0,,,,,,6,
 3181,CaptainFelock@ARROWREPEL,attack,148,1,500,1500,5000,yes,target,always,0,,,,,,6,
+
+//HERCULES
+
+	E1_G_S_NYDHOG: {
+		MG_FIREBALL: {
+			SkillState: "MSS_RUSH"
+			SkillLevel: 5
+			Rate: 10000
+			Delay: 30000
+			Cancelable: true
+			SkillTarget: "MST_TARGET"
+			CastCondition: "MSC_ALWAYS"
+		}
+		MG_FIREBALL: {
+			SkillState: "MSS_BERSERK"
+			SkillLevel: 5
+			Rate: 10000
+			Delay: 30000
+			Cancelable: true
+			SkillTarget: "MST_TARGET"
+			CastCondition: "MSC_ALWAYS"
+		}
+
+	}
+	E1_FELOCK: {
+		AC_DOUBLE: {
+			SkillState: "MSS_RUSH"
+			SkillLevel: 10
+			Rate: 2000
+			Delay: 30000
+			Cancelable: true
+			SkillTarget: "MST_TARGET"
+			CastCondition: "MSC_ALWAYS"
+		}
+		AC_DOUBLE: {
+			SkillState: "MSS_BERSERK"
+			SkillLevel: 10
+			Rate: 2000
+			Delay: 30000
+			Cancelable: true
+			SkillTarget: "MST_TARGET"
+			CastCondition: "MSC_ALWAYS"
+		}
+		NPC_COMBOATTACK: {
+			SkillState: "MSS_RUSH"
+			SkillLevel: 5
+			Rate: 2000
+			CastTime: 2500
+			Delay: 30000
+			Cancelable: true
+			SkillTarget: "MST_TARGET"
+			CastCondition: "MSC_ALWAYS"
+		}
+		NPC_COMBOATTACK: {
+			SkillState: "MSS_BERSERK"
+			SkillLevel: 5
+			Rate: 2000
+			CastTime: 2500
+			Delay: 30000
+			Cancelable: true
+			SkillTarget: "MST_TARGET"
+			CastCondition: "MSC_ALWAYS"
+		}
+		AC_CHARGEARROW: {
+			SkillState: "MSS_RUSH"
+			SkillLevel: 1
+			Rate: 500
+			CastTime: 1500
+			Delay: 5000
+			Cancelable: true
+			SkillTarget: "MST_TARGET"
+			CastCondition: "MSC_ALWAYS"
+		}
+		AC_CHARGEARROW: {
+			SkillState: "MSS_BERSERK"
+			SkillLevel: 1
+			Rate: 500
+			CastTime: 1500
+			Delay: 5000
+			Cancelable: true
+			SkillTarget: "MST_TARGET"
+			CastCondition: "MSC_ALWAYS"
+		}
+
+	}
