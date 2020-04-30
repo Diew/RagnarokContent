@@ -1,4 +1,7 @@
-
+1@new.gnd#1@new.gnd#
+1@new.gat#1@new.gat#
+1@new.rsw#1@new.rsw#
+유저인터페이스\map\1@new.bmp#유저인터페이스\map\1@new.bmp#
 2@new.gnd#1@new.gnd#
 2@new.gat#1@new.gat#
 2@new.rsw#1@new.rsw#
