@@ -403,7 +403,7 @@ OnDisable:
 	end;
 }
 	
-1@air1,236,57,3	script	Ground Asl.#1air1	3176,{ //GREMLIN
+1@air1,236,57,3	script	Ground Asl.#1air1	E1_GREMLIN,{ //GREMLIN
 	end;
 OnASInstanceInit:
 
@@ -415,13 +415,13 @@ OnEnable:
 	end;
 }
 
-1@air1,239,57,5	duplicate(Ground Asl.#1air1)	Ground Asl.#2air1	3176 //GREMLIN
-1@air1,230,50,5	duplicate(Ground Asl.#1air1)	Ground Asl.#3air1	3176 //GREMLIN
-1@air1,226,62,3	duplicate(Ground Asl.#1air1)	Ground Asl.#4air1	3176 //GREMLIN
-1@air1,241,48,3	duplicate(Ground Asl.#1air1)	Ground Asl.#5air1	3176 //GREMLIN
-1@air1,225,40,7	duplicate(Ground Asl.#1air1)	Ground Asl.#6air1	3176 //GREMLIN
-1@air1,236,48,7	duplicate(Ground Asl.#1air1)	Ground Asl.#7air1	3176 //GREMLIN
-1@air1,224,66,5	duplicate(Ground Asl.#1air1)	Ground Asl.#8air1	3176 //GREMLIN
+1@air1,239,57,5	duplicate(Ground Asl.#1air1)	Ground Asl.#2air1	E1_GREMLIN //GREMLIN
+1@air1,230,50,5	duplicate(Ground Asl.#1air1)	Ground Asl.#3air1	E1_GREMLIN //GREMLIN
+1@air1,226,62,3	duplicate(Ground Asl.#1air1)	Ground Asl.#4air1	E1_GREMLIN //GREMLIN
+1@air1,241,48,3	duplicate(Ground Asl.#1air1)	Ground Asl.#5air1	E1_GREMLIN //GREMLIN
+1@air1,225,40,7	duplicate(Ground Asl.#1air1)	Ground Asl.#6air1	E1_GREMLIN //GREMLIN
+1@air1,236,48,7	duplicate(Ground Asl.#1air1)	Ground Asl.#7air1	E1_GREMLIN //GREMLIN
+1@air1,224,66,5	duplicate(Ground Asl.#1air1)	Ground Asl.#8air1	E1_GREMLIN //GREMLIN
 
 //Warportals.
 
@@ -445,20 +445,20 @@ OnEnable:
 	enablenpc strnpcinfo(0);
 	set .@map$, instance_mapname("1@air1", instance_id());
 	set .@label$, strnpcinfo(0)+"::OnMyMobDead";
-	areamonster .@map$,36,49,98,77,"Air Asl.",3175,9,.@label$;
-	areamonster .@map$,36,49,98,77,"Air Asl.",3177,10,.@label$;
+	areamonster .@map$,36,49,98,77,"Air Asl.",E1_ROTAR_ZAIRO,9,.@label$;
+	areamonster .@map$,36,49,98,77,"Air Asl.",E1_GREMLIN,10,.@label$;
 	
-	monster .@map$,62,92,"Air Asl.",3175,1,.@label$;
-	monster .@map$,61,88,"Air Asl.",3177,1,.@label$;
+	monster .@map$,62,92,"Air Asl.",E1_ROTAR_ZAIRO,1,.@label$;
+	monster .@map$,61,88,"Air Asl.",E1_GREMLIN,1,.@label$;
 	
-	monster .@map$,62,32,"Air Asl.",3175,1,.@label$;
-	monster .@map$,60,36,"Air Asl.",3177,1,.@label$;
+	monster .@map$,62,32,"Air Asl.",E1_ROTAR_ZAIRO,1,.@label$;
+	monster .@map$,60,36,"Air Asl.",E1_GREMLIN,1,.@label$;
 	
-	monster .@map$,19,66,"Air Asl.",3175,1,.@label$;
-	monster .@map$,19,64,"Air Asl.",3175,1,.@label$;
-	monster .@map$,19,62,"Air Asl.",3175,1,.@label$;
-	monster .@map$,19,60,"Air Asl.",3175,1,.@label$;
-	areamonster .@map$,102,68,117,54,"Air Asl.",3177,3,.@label$;
+	monster .@map$,19,66,"Air Asl.",E1_ROTAR_ZAIRO,1,.@label$;
+	monster .@map$,19,64,"Air Asl.",E1_ROTAR_ZAIRO,1,.@label$;
+	monster .@map$,19,62,"Air Asl.",E1_ROTAR_ZAIRO,1,.@label$;
+	monster .@map$,19,60,"Air Asl.",E1_ROTAR_ZAIRO,1,.@label$;
+	areamonster .@map$,102,68,117,54,"Air Asl.",E1_GREMLIN,3,.@label$;
 	set .MyMobs,30;
 	end;
 OnMyMobDead:
@@ -487,26 +487,26 @@ OnEnable:
 	enablenpc strnpcinfo(0);
 	set .@map$, instance_mapname("1@air1", instance_id());
 	set .@label$, instance_npcname(strnpcinfo(0), instance_id())+"::OnMyMobDead";
-	monster .@map$,97,201,"Ground Asl.",3176,1,.@label$;
-	monster .@map$,97,198,"Ground Asl.",3176,1,.@label$;
-	monster .@map$,97,177,"Ground Asl.",3176,1,.@label$;
-	monster .@map$,97,174,"Ground Asl.",3176,1,.@label$;
+	monster .@map$,97,201,"Ground Asl.",E1_BEHOLDER,1,.@label$;
+	monster .@map$,97,198,"Ground Asl.",E1_BEHOLDER,1,.@label$;
+	monster .@map$,97,177,"Ground Asl.",E1_BEHOLDER,1,.@label$;
+	monster .@map$,97,174,"Ground Asl.",E1_BEHOLDER,1,.@label$;
 	
-	monster .@map$,18,192,"Dragon Muggler",3179,1,.@label$;
-	monster .@map$,18,190,"Dragon Muggler",3179,1,.@label$;
-	monster .@map$,18,188,"Dragon Muggler",3179,1,.@label$;
-	monster .@map$,18,186,"Dragon Muggler",3179,1,.@label$;
+	monster .@map$,18,192,"Dragon Muggler",E1_ACIDUS_,1,.@label$;
+	monster .@map$,18,190,"Dragon Muggler",E1_ACIDUS_,1,.@label$;
+	monster .@map$,18,188,"Dragon Muggler",E1_ACIDUS_,1,.@label$;
+	monster .@map$,18,186,"Dragon Muggler",E1_ACIDUS_,1,.@label$;
 	
-	monster .@map$,65,215,"Ground Asl.",3176,1,.@label$;
-	monster .@map$,65,215,"Dragon Muggler",3179,1,.@label$;
-	monster .@map$,65,160,"Ground Asl.",3176,1,.@label$;
-	monster .@map$,65,160,"Dragon Muggler",3179,1,.@label$;
+	monster .@map$,65,215,"Ground Asl.",E1_BEHOLDER,1,.@label$;
+	monster .@map$,65,215,"Dragon Muggler",E1_ACIDUS_,1,.@label$;
+	monster .@map$,65,160,"Ground Asl.",E1_BEHOLDER,1,.@label$;
+	monster .@map$,65,160,"Dragon Muggler",E1_ACIDUS_,1,.@label$;
 	
-	areamonster .@map$,108,198,119,180,"Dragon Muggler",3179,2,.@label$;
-	areamonster .@map$,108,198,119,180,"Ground Asl.",3176,2,.@label$;
+	areamonster .@map$,108,198,119,180,"Dragon Muggler",E1_ACIDUS_,2,.@label$;
+	areamonster .@map$,108,198,119,180,"Ground Asl.",E1_BEHOLDER,2,.@label$;
 	
-	areamonster .@map$,87,209,30,171,"Dragon Muggler",3179,7,.@label$;
-	areamonster .@map$,87,209,30,171,"Ground Asl.",3176,7,.@label$;
+	areamonster .@map$,87,209,30,171,"Dragon Muggler",E1_ACIDUS_,7,.@label$;
+	areamonster .@map$,87,209,30,171,"Ground Asl.",E1_BEHOLDER,7,.@label$;
 	set .MyMobs,30;
 	end;
 OnMyMobDead:
@@ -536,20 +536,20 @@ OnEnable:
 	enablenpc strnpcinfo(0);
 	set .@map$, instance_mapname("1@air2", instance_id());
 	set .@label$, instance_npcname(strnpcinfo(0), instance_id())+"::OnMyMobDead";
-	areamonster .@map$,36,49,98,77,"Dragon Muggler",3178,9,.@label$;
-	areamonster .@map$,36,49,98,77,"Air Asl.",3177,10,.@label$;
+	areamonster .@map$,36,49,98,77,"Dragon Muggler",E1_ACIDUS,9,.@label$;
+	areamonster .@map$,36,49,98,77,"Air Asl.",E1_GREMLIN,10,.@label$;
 	
-	monster .@map$,62,92,"Dragon Muggler",3178,1,.@label$;
-	monster .@map$,61,88,"Dragon Muggler",3177,1,.@label$;
+	monster .@map$,62,92,"Dragon Muggler",E1_ACIDUS,1,.@label$;
+	monster .@map$,61,88,"Dragon Muggler",E1_GREMLIN,1,.@label$;
 	
-	monster .@map$,62,32,"Dragon Muggler",3178,1,.@label$;
-	monster .@map$,60,36,"Dragon Muggler",3177,1,.@label$;
+	monster .@map$,62,32,"Dragon Muggler",E1_ACIDUS,1,.@label$;
+	monster .@map$,60,36,"Dragon Muggler",E1_GREMLIN,1,.@label$;
 	
-	monster .@map$,19,66,"Dragon Muggler",3178,1,.@label$;
-	monster .@map$,19,64,"Dragon Muggler",3178,1,.@label$;
-	monster .@map$,19,62,"Dragon Muggler",3178,1,.@label$;
-	monster .@map$,19,60,"Dragon Muggler",3178,1,.@label$;
-	areamonster .@map$,102,68,117,54,"Air Asl.",3177,3,.@label$;
+	monster .@map$,19,66,"Dragon Muggler",E1_ACIDUS,1,.@label$;
+	monster .@map$,19,64,"Dragon Muggler",E1_ACIDUS,1,.@label$;
+	monster .@map$,19,62,"Dragon Muggler",E1_ACIDUS,1,.@label$;
+	monster .@map$,19,60,"Dragon Muggler",E1_ACIDUS,1,.@label$;
+	areamonster .@map$,102,68,117,54,"Air Asl.",E1_GREMLIN,3,.@label$;
 	set .MyMobs,30;
 	end;
 OnMyMobDead:
@@ -581,7 +581,7 @@ OnEnable:
 	enablenpc strnpcinfo(0);
 	set .@map$, instance_mapname("1@air2", instance_id());
 	set .@label$, instance_npcname(strnpcinfo(0), instance_id())+"::OnMyMobDead";
-	monster .@map$,235,49,"Great Dragon",3180,1,.@label$;
+	monster .@map$,235,49,"Great Dragon",E1_G_S_NYDHOG,1,.@label$;
 	end;
 OnMyMobDead:
 	set .@map$, instance_mapname("1@air2", instance_id());
@@ -616,7 +616,7 @@ OnEnable:
 	enablenpc strnpcinfo(0);
 	set .@map$, instance_mapname("1@air2", instance_id());
 	set .@label$, instance_npcname(strnpcinfo(0), instance_id())+"::OnMyMobDead";
-	monster .@map$,247,51,"Captain Felock",3181,1,.@label$;
+	monster .@map$,247,51,"Captain Felock",E1_FELOCK,1,.@label$;
 	end;
 OnMyMobDead:
 	set .@map$, instance_mapname("1@air2", instance_id());
@@ -824,7 +824,7 @@ OnEnable:
 	enablenpc instance_npcname(strnpcinfo(0), instance_id());
 	end;
 }
-1@air2,235,59,3	script	Great Dragon#2air2	3180,{ //E1_G_S_NYDHOG
+1@air2,235,59,3	script	Great Dragon#2air2	E1_G_S_NYDHOG,{ //E1_G_S_NYDHOG
 	end;
 OnASInstanceInit:
 
@@ -835,7 +835,7 @@ OnEnable:
 	enablenpc instance_npcname(strnpcinfo(0), instance_id());
 	end;
 }
-1@air2,235,49,3	script	Great Dragon#3air2	3180,{ //E1_G_S_NYDHOG
+1@air2,235,49,3	script	Great Dragon#3air2	E1_G_S_NYDHOG,{ //E1_G_S_NYDHOG
 	end;
 OnASInstanceInit:
 
@@ -910,7 +910,7 @@ OnEnable:
 	end;
 }
 
-1@air1,93,188,5	script	Ground Asl.#2aair	3176,{ //E1_GREMLIN
+1@air1,93,188,5	script	Ground Asl.#2aair	E1_BEHOLDER,{ //E1_GREMLIN
 	end;
 OnASInstanceInit:
 
@@ -1467,7 +1467,7 @@ OnTimer3400:
 
 //FINAL EFFECT!
 	
-1@air2,236,57,3	script	Ground Asl.#1air2	3176,{ //E1_GREMLIN
+1@air2,236,57,3	script	Ground Asl.#1air2	E1_BEHOLDER,{ //E1_GREMLIN
 	end;
 OnASInstanceInit:
 OnDisable:
@@ -1481,15 +1481,15 @@ OnEffect:
 	end;
 }
 
-1@air2,239,57,0	duplicate(Ground Asl.#1air2)	Ground Asl.#2air2	3176 //E1_GREMLIN
-1@air2,230,50,5	duplicate(Ground Asl.#1air2)	Ground Asl.#3air2	3176 //E1_GREMLIN
-1@air2,226,62,3	duplicate(Ground Asl.#1air2)	Ground Asl.#4air2	3176 //E1_GREMLIN
-1@air2,241,48,3	duplicate(Ground Asl.#1air2)	Ground Asl.#5air2	3176 //E1_GREMLIN
-1@air2,225,40,7	duplicate(Ground Asl.#1air2)	Ground Asl.#6air2	3176 //E1_GREMLIN
-1@air2,236,48,7	duplicate(Ground Asl.#1air2)	Ground Asl.#7air2	3176 //E1_GREMLIN
-1@air2,224,66,5	duplicate(Ground Asl.#1air2)	Ground Asl.#8air2	3176 //E1_GREMLIN
+1@air2,239,57,0	duplicate(Ground Asl.#1air2)	Ground Asl.#2air2	E1_BEHOLDER //E1_GREMLIN
+1@air2,230,50,5	duplicate(Ground Asl.#1air2)	Ground Asl.#3air2	E1_BEHOLDER //E1_GREMLIN
+1@air2,226,62,3	duplicate(Ground Asl.#1air2)	Ground Asl.#4air2	E1_BEHOLDER //E1_GREMLIN
+1@air2,241,48,3	duplicate(Ground Asl.#1air2)	Ground Asl.#5air2	E1_BEHOLDER //E1_GREMLIN
+1@air2,225,40,7	duplicate(Ground Asl.#1air2)	Ground Asl.#6air2	E1_BEHOLDER //E1_GREMLIN
+1@air2,236,48,7	duplicate(Ground Asl.#1air2)	Ground Asl.#7air2	E1_BEHOLDER //E1_GREMLIN
+1@air2,224,66,5	duplicate(Ground Asl.#1air2)	Ground Asl.#8air2	E1_BEHOLDER //E1_GREMLIN
 
-1@air1,213,75,5	script	Great Dragon#air1	3180,{ //E1_G_S_NYDHOG
+1@air1,213,75,5	script	Great Dragon#air1	E1_G_S_NYDHOG,{ //E1_G_S_NYDHOG
 	end;
 OnASInstanceInit:
 OnDisable:
@@ -1500,7 +1500,7 @@ OnEnable:
 	end;
 }
 
-1@air1,218,78,3	script	Dragon Muggler#1air1	3179,{ //E1_ACIDUS
+1@air1,218,78,3	script	Dragon Muggler#1air1	E1_ACIDUS_,{ //E1_ACIDUS
 	end;
 OnASInstanceInit:
 OnDisable:
@@ -1511,6 +1511,6 @@ OnEnable:
 	end;
 }
 
-1@air2,208,78,5	duplicate(Ground Asl.#1air2)	Dragon Muggler#2air1	3179 //E1_ACIDUS
-1@air2,200,78,5	duplicate(Ground Asl.#1air2)	Air Asl.#1air1	3175 //E1_ROTAR_ZAIRO
-1@air2,223,78,5	duplicate(Ground Asl.#1air2)	Air Asl.#2air1	3175 //E1_ROTAR_ZAIRO
+1@air2,208,78,5	duplicate(Ground Asl.#1air2)	Dragon Muggler#2air1	E1_ACIDUS_ //E1_ACIDUS
+1@air2,200,78,5	duplicate(Ground Asl.#1air2)	Air Asl.#1air1	E1_ROTAR_ZAIRO //E1_ROTAR_ZAIRO
+1@air2,223,78,5	duplicate(Ground Asl.#1air2)	Air Asl.#2air1	E1_ROTAR_ZAIRO //E1_ROTAR_ZAIRO
